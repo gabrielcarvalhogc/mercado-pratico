@@ -1,0 +1,54 @@
+@import '../styles/variables.module';
+
+.header {
+  height: 180px;
+  padding: 0 30px;
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      align-items: center;
+      background-color: $white;
+      display: flex;
+      gap: 10px;
+      text-decoration: none;
+  
+      svg {
+        height: 40px;
+        width: 40px;
+      }
+  
+      h1 {
+        color: $dark-gray;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+
+    .cartButton {
+      align-items: center;
+      background-color: $dark-blue;
+      border: none;
+      border-radius: 22px;
+      cursor: pointer;
+      display: inherit;
+      gap: 10px;
+      height: 45px;
+      padding: 0 15px;
+
+      svg {
+        height: 25px;
+        width: 25px;
+      }
+
+      span {
+        color: $white;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+}
