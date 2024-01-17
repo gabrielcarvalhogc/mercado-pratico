@@ -1,0 +1,98 @@
+[
+  {
+    "preco": 390,
+    "title": "Refrigerante de cola",
+    "description": "Garrafa 290ml",
+    "thumb": "/public/products/drinks/refrigerante-thumb.jpeg",
+    "image": "/public/products/drinks/refrigerante.jpeg",
+    "category": "bebidas"
+  },
+  {
+    "preco": 175,
+    "title": "Água mineral",
+    "description": "sem gás 600ml",
+    "thumb": "/public/products/drinks/agua-mineral-thumb.jpeg",
+    "image": "/public/products/drinks/agua-mineral.jpeg",
+    "category": "bebidas"
+  },
+  {
+    "preco": 1190,
+    "title": "Chá gelado",
+    "description": "Chá gelado limao 400ml",
+    "thumb": "/public/products/drinks/cha-gelado-thumb.jpeg",
+    "image": "/public/products/drinks/cha-gelado.jpeg",
+    "category": "bebidas"
+  },
+  {
+    "preco": 990,
+    "title": "Energético",
+    "description": "lata 250ml",
+    "thumb": "/public/products/drinks/energetico-thumb.jpeg",
+    "image": "/public/products/drinks/energetico.jpeg",
+    "category": "bebidas"
+  },
+  {
+    "preco": 1780,
+    "title": "Suco de uva",
+    "description": "Suco integral de uva 1l",
+    "thumb": "/public/products/drinks/suco-de-uva-thumb.jpeg",
+    "image": "/public/products/drinks/suco-de-uva.jpeg",
+    "category": "bebidas"
+  },
+  {
+    "preco": 3990,
+    "title": "Vinho tinto",
+    "description": "garrafa 1,5l",
+    "thumb": "/public/products/drinks/vinho-thumb.jpeg",
+    "image": "/public/products/drinks/vinho.jpeg",
+    "category": "bebidas"
+  },
+  {
+    "preco": 1390,
+    "title": "Batata palito congelada",
+    "description": "pacote 1kg",
+    "thumb": "/public/products/frios/batata-thumb.jpeg",
+    "image": "/public/products/frios/batata.jpeg",
+    "category": "frios"
+  },
+  {
+    "preco": 1090,
+    "title": "Brocolis congelado",
+    "description": "Pacote 600g",
+    "thumb": "/public/products/frios/brocoli-thumb.jpeg",
+    "image": "/public/products/frios/brocoli.jpeg",
+    "category": "frios"
+  },
+  {
+    "preco": 1790,
+    "title": "Peito de frango congelado",
+    "description": "embalagem 1kg",
+    "thumb": "/public/products/frios/frango-thumb.jpeg",
+    "image": "/public/products/frios/frango.jpeg",
+    "category": "frios"
+  },
+  {
+    "preco": 390,
+    "title": "Hambúrguer congelado",
+    "description": "unidade 120g",
+    "thumb": "/public/products/frios/hamburguer-thumb.jpeg",
+    "image": "/public/products/frios/hamburguer.jpeg",
+    "category": "frios"
+  },
+  {
+    "preco": 1590,
+    "title": "Lasanha bolonhesa",
+    "description": "embalagem 650g",
+    "thumb": "/public/products/frios/lasanha-thumb.jpeg",
+    "image": "/public/products/frios/lasanha.jpeg",
+    "category": "frios"
+  },
+  {
+    "preco": 1990,
+    "title": "Pizza congelada",
+    "description": "Unidade 550g",
+    "thumb": "/public/products/frios/pizza-thumb.jpeg",
+    "image": "/public/products/frios/pizza.jpeg",
+    "category": "frios"
+  }
+]
