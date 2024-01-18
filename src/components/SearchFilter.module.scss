@@ -1,0 +1,44 @@
+@import '../styles/variables.module';
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  padding-top: 180px;
+
+  .image {
+    left: 50px;
+    position: relative;
+    top: 17px;
+    z-index: 1;
+  }
+
+  input {
+    border-color: $light-gray;
+    border-radius: 22px;
+    color: $dark-gray;
+    font-size: 18px;
+    height: 60px;
+    padding-left: 55px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding-right: 30px;
+    padding-top: 160px;
+
+    .image {
+      left: 40px;
+      top: 13px;
+    }
+
+    input {
+      border-radius: 18px;
+      height: 50px;
+      padding-left: 45px;
+      width: 250px;
+    }
+  }
+}

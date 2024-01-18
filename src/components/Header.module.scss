@@ -1,11 +1,13 @@
 @import '../styles/variables.module';
 
 .header {
-  height: 150px;
+  background-color: $white;
+  height: 145px;
   padding: 0 30px;
-  width: 100vw;
-  display: block;
   position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 
   .container {
     align-items: center;
@@ -15,7 +17,6 @@
 
     .logo {
       align-items: center;
-      background-color: $white;
       display: flex;
       gap: 10px;
       text-decoration: none;
@@ -80,6 +81,7 @@
 @media (max-width: 768px) and (min-width: 500px) {
   .header {
     padding: 0 20px;
+    height: 130px;
 
     .container {
       .logo {
@@ -117,7 +119,7 @@
 
 @media (max-width: 499px) {
   .header {
-    height: 120px;
+    height: 112px;
     padding: 0 10px;
 
     .container {
