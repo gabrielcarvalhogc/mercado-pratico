@@ -1,8 +1,8 @@
 "use client"
 
-import { ShoppingBasket } from './ShoppingBasket';
+import { ShoppingBasket } from '../Icons/ShoppingBasket';
 import styles from './Header.module.scss';
-import { ShoppingCart } from './ShoppingCart';
+import { ShoppingCart } from '../Icons/ShoppingCart';
 import { useState } from 'react';
 
 export function Header() {

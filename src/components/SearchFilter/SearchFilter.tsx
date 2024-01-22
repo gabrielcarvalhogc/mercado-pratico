@@ -1,4 +1,4 @@
-import searchIcon from '../../public/search-icon.png'
+import searchIcon from '../../../public/search-icon.png'
 import Image from 'next/image'
 import styles from './SearchFilter.module.scss'
 

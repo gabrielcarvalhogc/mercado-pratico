@@ -1,6 +1,6 @@
-import { SearchFilter } from '@/components/SearchFilter';
+import { SearchFilter } from '@/components/SearchFilter/SearchFilter';
 import './globals.css';
-import { Header } from '@/components/header'
+import { Header } from '@/components/Header/header'
 
 export default function Home() {
   return (
