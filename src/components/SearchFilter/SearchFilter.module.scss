@@ -23,6 +23,13 @@
     width: 350px;
   }
 }
+.filtered {
+  display: flex;
+  max-width: 90vw;
+  overflow: hidden;
+  margin: 20px auto;
+  gap: 20px;
+}
 
 @media (max-width: 550px) {
   .container {

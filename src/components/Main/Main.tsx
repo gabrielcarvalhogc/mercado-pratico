@@ -9,7 +9,7 @@ export function Main() {
 
   return (
     <main>
-      <SearchFilter/>
+      <SearchFilter data={produtos}/>
       <ProductList products={bebidas} category="Bebidas" />
       <ProductList products={frios} category="Frios" />
     </main>
