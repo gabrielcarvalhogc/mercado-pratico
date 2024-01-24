@@ -47,8 +47,7 @@ export function SearchFilter({ data }: SearchFIlterProps) {
       </div>
       <div className={styles.filtered}>
         {isInputChange && items.map(item => (
-          <Product {...item} key={item.title} />
-          // Adicione aqui a lógica para renderizar outros detalhes do item
+          <Product {...item} key={item.id} />
         ))}
       </div>
     </>

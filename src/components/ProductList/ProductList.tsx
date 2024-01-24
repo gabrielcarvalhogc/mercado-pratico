@@ -46,7 +46,7 @@ export function ProductList({ products, category }: ProductListProps) {
       <h2>{category}</h2>
       <Slider {...settings} className={styles.slider}>
         {products.map((product) => (
-          <Product {...product} key={product.title}/>
+          <Product {...product} key={product.id}/>
         ))}
       </Slider>
     </section>

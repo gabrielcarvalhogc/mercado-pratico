@@ -5,4 +5,5 @@ export interface ProductItemType {
   thumb: string,
   image: string,
   category: string,
+  id: number
 }
