@@ -214,5 +214,59 @@
     "image": "/products/padaria/rap10.jpeg",
     "category": "padaria",
     "id": 33
+  },
+  {
+    "preco": 6.90,
+    "title": "Abacaxi",
+    "description": "1 unidade",
+    "thumb": "/products/feira/abacaxi-thumb.jpeg",
+    "image": "/products/feira/abacaxi.jpeg",
+    "category": "feira",
+    "id": 34
+  },
+  {
+    "preco": 0.99,
+    "title": "Alface",
+    "description": "1 unidade",
+    "thumb": "/products/feira/alface-thumb.jpeg",
+    "image": "/products/feira/alface.jpeg",
+    "category": "feira",
+    "id": 35
+  },
+  {
+    "preco": 5.60,
+    "title": "Banana",
+    "description": "1 kilo",
+    "thumb": "/products/feira/banana-thumb.jpeg",
+    "image": "/products/feira/banana.jpeg",
+    "category": "feira",
+    "id": 36
+  },
+  {
+    "preco": 2.90,
+    "title": "Cenoura",
+    "description": "1 kilo",
+    "thumb": "/products/feira/cenoura-thumb.jpeg",
+    "image": "/products/feira/cenoura.jpeg",
+    "category": "feira",
+    "id": 37
+  },
+  {
+    "preco": 2.90,
+    "title": "Laranja",
+    "description": "1 kilo",
+    "thumb": "/products/feira/laranja-thumb.jpeg",
+    "image": "/products/feira/laranja.jpeg",
+    "category": "feira",
+    "id": 38
+  },
+  {
+    "preco": 1.20,
+    "title": "Tomate",
+    "description": "1 kilo",
+    "thumb": "/products/feira/tomate-thumb.jpeg",
+    "image": "/products/feira/tomate.jpeg",
+    "category": "feira",
+    "id": 39
   }
 ]
