@@ -160,5 +160,59 @@
     "image": "/products/higiene/condicionador.jpeg",
     "category": "higiene",
     "id": 27
+  },
+  {
+    "preco": 8.90,
+    "title": "Pão de forma",
+    "description": "pacote 480g",
+    "thumb": "/products/padaria/pao-forma-thumb.jpeg",
+    "image": "/products/padaria/pao-forma.jpeg",
+    "category": "padaria",
+    "id": 28
+  },
+  {
+    "preco": 0.70,
+    "title": "Pão francês",
+    "description": "unidade",
+    "thumb": "/products/padaria/pao-frances-thumb.jpeg",
+    "image": "/products/padaria/pao-frances.jpeg",
+    "category": "padaria",
+    "id": 29
+  },
+  {
+    "preco": 1.20,
+    "title": "Pão de hambuguer",
+    "description": "unidade",
+    "thumb": "/products/padaria/pao-hamburguer-thumb.jpeg",
+    "image": "/products/padaria/pao-hamburguer.jpeg",
+    "category": "padaria",
+    "id": 30
+  },
+  {
+    "preco": 12.90,
+    "title": "Presunto",
+    "description": "pacote 200g",
+    "thumb": "/products/padaria/presunto-thumb.jpeg",
+    "image": "/products/padaria/presunto.jpeg",
+    "category": "padaria",
+    "id": 31
+  },
+  {
+    "preco": 27.90,
+    "title": "Queijo mussarela",
+    "description": "pacote 350g",
+    "thumb": "/products/padaria/queijo-thumb.jpeg",
+    "image": "/products/padaria/queijo.jpeg",
+    "category": "padaria",
+    "id": 32
+  },
+  {
+    "preco": 10.90,
+    "title": "Rap10",
+    "description": "Embalagem 290g",
+    "thumb": "/products/padaria/rap10-thumb.jpeg",
+    "image": "/products/padaria/rap10.jpeg",
+    "category": "padaria",
+    "id": 33
   }
 ]

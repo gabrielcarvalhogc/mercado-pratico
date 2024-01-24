@@ -7,6 +7,7 @@ export function Main() {
   const bebidas = produtos.filter((produto) => produto.category === 'bebidas');
   const frios = produtos.filter((produto) => produto.category === 'frios');
   const higiene = produtos.filter((produto) => produto.category === 'higiene');
+  const padaria = produtos.filter((produto) => produto.category === 'padaria');
 
   return (
     <main>
@@ -14,6 +15,7 @@ export function Main() {
       <ProductList products={bebidas} category="Bebidas" />
       <ProductList products={frios} category="Frios" />
       <ProductList products={higiene} category="Higiene" />
+      <ProductList products={padaria} category="Padaria" />
     </main>
   );
 }

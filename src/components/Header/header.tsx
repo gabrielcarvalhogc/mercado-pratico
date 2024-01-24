@@ -26,7 +26,7 @@ export function Header() {
       </div>
 
       <ul className={styles.list}>
-        {['Bebidas', 'Frios', 'Higiene', 'Padaria', 'Feira', 'Doces'].map((category, index) => (
+        {['Bebidas', 'Frios', 'Higiene', 'Padaria', 'Feira'].map((category, index) => (
           <li key={index}>
             <a
               href="#"
