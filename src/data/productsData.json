@@ -106,5 +106,59 @@
     "image": "/products/frios/pizza.jpeg",
     "category": "frios",
     "id": 21
+  },
+  {
+    "preco": 3.90,
+    "title": "Sabonete alecrim",
+    "description": "unidade 85g",
+    "thumb": "/products/higiene/sabonete-alecrim-thumb.jpeg",
+    "image": "/products/higiene/sabonete-alecrim.jpeg",
+    "category": "higiene",
+    "id": 22
+  },
+  {
+    "preco": 4.30,
+    "title": "Sabonete de rosas",
+    "description": "unidade 85g",
+    "thumb": "/products/higiene/sabonete-rosa-thumb.jpeg",
+    "image": "/products/higiene/sabonete-rosa.jpeg",
+    "category": "higiene",
+    "id": 23
+  },
+  {
+    "preco": 9.99,
+    "title": "Creme dental",
+    "description": "unidade 100g",
+    "thumb": "/products/higiene/creme-dental-thumb.jpeg",
+    "image": "/products/higiene/creme-dental.jpeg",
+    "category": "higiene",
+    "id": 24
+  },
+  {
+    "preco": 19.90,
+    "title": "Desodorante",
+    "description": "unidade 120g",
+    "thumb": "/products/higiene/desodorante-thumb.jpeg",
+    "image": "/products/higiene/desodorante.jpeg",
+    "category": "higiene",
+    "id": 25
+  },
+  {
+    "preco": 12.90,
+    "title": "Shampoo",
+    "description": "embalagem 350g",
+    "thumb": "/products/higiene/shampoo-thumb.jpeg",
+    "image": "/products/higiene/shampoo.jpeg",
+    "category": "higiene",
+    "id": 26
+  },
+  {
+    "preco": 14.90,
+    "title": "Condicionador",
+    "description": "Embalagem 350g",
+    "thumb": "/products/higiene/condicionador-thumb.jpeg",
+    "image": "/products/higiene/condicionador.jpeg",
+    "category": "higiene",
+    "id": 27
   }
 ]
