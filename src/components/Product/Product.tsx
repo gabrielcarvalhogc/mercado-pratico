@@ -2,10 +2,12 @@ import { ProductItemType } from '@/types/productItem';
 import Image from 'next/image';
 import styles from './Product.module.scss';
 import { formatPrice } from '@/hooks/formatPrice';
+import Link from 'next/link';
 
 export function Product(product: ProductItemType) {
+
   return (
-    <div className={styles.container}>
+    <Link className={styles.container} href={`/productPage/${product.id}`}>
       <div className={styles.view}>
         <Image
           src={product.thumb}
@@ -24,6 +26,6 @@ export function Product(product: ProductItemType) {
         <p className={styles.title}>{product.title}</p>
         <p className={styles.description}>{product.description}</p>
       </div>
-    </div>
+    </Link>
   )
 }
