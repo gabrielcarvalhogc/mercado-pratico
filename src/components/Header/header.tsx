@@ -3,13 +3,35 @@
 import { ShoppingBasket } from '../Icons/ShoppingBasket';
 import styles from './Header.module.scss';
 import { ShoppingCart } from '../Icons/ShoppingCart';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export function Header() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
-  function handleLinkClick(index: number) {
-    setActiveIndex(index === activeIndex ? null : index);
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll('section').forEach((section) => {
+      sectionObserver.observe(section);
+    });
+
+    return () => {
+      sectionObserver.disconnect();
+    };
+  }, []);
+
+  function switchLinks(category: string) {
+    return `#${category}`;
   }
 
   return (
@@ -28,13 +50,12 @@ export function Header() {
       <ul className={styles.list}>
         {['Bebidas', 'Frios', 'Higiene', 'Padaria', 'Feira'].map((category, index) => (
           <li key={index}>
-            <a
-              href="#"
-              className={`${styles.link} ${index === activeIndex ? styles.active : ''}`}
-              onClick={() => handleLinkClick(index)}
-            >
+            <Link
+              href={switchLinks(category)}
+              className={`${styles.link} ${activeSection === category ? styles.active : ''}`}
+              >
               {category}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

@@ -42,7 +42,7 @@ export function ProductList({ products, category }: ProductListProps) {
   };
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id={category}>
       <h2>{category}</h2>
       <Slider {...settings} className={styles.slider}>
         {products.map((product) => (
