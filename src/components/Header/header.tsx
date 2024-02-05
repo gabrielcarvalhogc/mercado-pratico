@@ -5,9 +5,11 @@ import styles from './Header.module.scss';
 import { ShoppingCart } from '../Icons/ShoppingCart';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { Cart } from '../Cart/Cart';
 
 export function Header() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     const sectionObserver = new IntersectionObserver(
@@ -34,6 +36,10 @@ export function Header() {
     return `#${category}`;
   }
 
+  const toggleCart = () => {
+    setShowCart(!showCart);
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -41,7 +47,7 @@ export function Header() {
           <ShoppingBasket/>
           <h1>Mercado prático</h1>
         </a>
-        <button className={styles.cartButton}>
+        <button className={styles.cartButton} onClick={toggleCart}>
           <ShoppingCart/>
           <span>R$ 00,00</span>
         </button>
@@ -59,6 +65,7 @@ export function Header() {
           </li>
         ))}
       </ul>
+      {showCart && <Cart/>}
     </header>
   );
 }
