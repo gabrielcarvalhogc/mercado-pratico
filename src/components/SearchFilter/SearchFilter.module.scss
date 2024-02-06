@@ -4,7 +4,7 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 50px;
-  padding-top: 180px;
+  padding-top: 130px;
 
   .image {
     left: 50px;
@@ -34,7 +34,7 @@
 @media (max-width: 550px) {
   .container {
     padding-right: 30px;
-    padding-top: 160px;
+    padding-top: 120px;
 
     .image {
       left: 40px;
@@ -46,6 +46,7 @@
       height: 50px;
       padding-left: 45px;
       width: 250px;
+      font-size: 16px;
     }
   }
 }
