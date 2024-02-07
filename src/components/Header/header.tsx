@@ -6,9 +6,12 @@ import { ShoppingCart } from '../Icons/ShoppingCart';
 import { useState } from 'react';
 import { Cart } from '../Cart/Cart';
 import { MenuLinks } from './MenuLinks';
+import { useTotalValue } from '@/contexts/CartContext';
+import { formatPrice } from '@/hooks/formatPrice';
 
 export function Header() {
   const [showCart, setShowCart] = useState(false);
+  const cartValue = useTotalValue();
 
   const toggleCart = () => {
     setShowCart(!showCart);
@@ -23,7 +26,7 @@ export function Header() {
         </a>
         <button className={styles.cartButton} onClick={toggleCart}>
           <ShoppingCart/>
-          <span>R$ 00,00</span>
+          <span>{formatPrice(cartValue)}</span>
         </button>
       </div>
 

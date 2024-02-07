@@ -4,28 +4,34 @@ import styles from './Product.module.scss';
 import { formatPrice } from '@/hooks/formatPrice';
 import Link from 'next/link';
 
-export function Product(product: ProductItemType) {
+interface ProductProps extends ProductItemType {
+  onAddToCart: () => void;
+}
+
+export function Product({ title, preco, thumb, description,id, onAddToCart }: ProductProps) {
 
   return (
-    <Link className={styles.container} href={`/productPage/${product.id}`}>
-      <div className={styles.view}>
-        <Image
-          src={product.thumb}
-          alt={product.description}
-          width={200}
-          height={200}
-          className={styles.img}
-        />
-        <button className={styles.btn}>
-          <div className={styles.hor}></div>
-          <div className={styles.ver}></div>
-        </button>
-      </div>
-      <div className={styles.info}>
-        <p className={styles.price}>{formatPrice(product.preco)}</p>
-        <p className={styles.title}>{product.title}</p>
-        <p className={styles.description}>{product.description}</p>
-      </div>
-    </Link>
+    <div className={styles.div}>
+      <Link className={styles.container} href={`/productPage/${id}`}>
+        <div className={styles.view}>
+          <Image
+            src={thumb}
+            alt={description}
+            width={200}
+            height={200}
+            className={styles.img}
+          />
+        </div>
+        <div className={styles.info}>
+          <p className={styles.price}>{formatPrice(preco)}</p>
+          <p className={styles.title}>{title}</p>
+          <p className={styles.description}>{description}</p>
+        </div>
+      </Link>
+      <button className={styles.btn} onClick={onAddToCart}>
+        <div className={styles.hor}></div>
+        <div className={styles.ver}></div>
+      </button>
+    </div>
   )
 }

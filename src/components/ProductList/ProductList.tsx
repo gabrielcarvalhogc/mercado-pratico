@@ -6,13 +6,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Product } from "../Product/Product";
 import { ProductItemType } from "@/types/productItem";
+import { useCart } from "../../contexts/CartContext";
 
 interface ProductListProps {
-  category: string
-  products: ProductItemType[]
+  category: string;
+  products: ProductItemType[];
 }
 
 export function ProductList({ products, category }: ProductListProps) {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (product: ProductItemType) => {
+    addToCart({
+      nome: product.title,
+      preco: product.preco,
+      quantidade: 1,
+    });
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -27,18 +38,18 @@ export function ProductList({ products, category }: ProductListProps) {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
-    ]
+    ],
   };
 
   return (
@@ -46,9 +57,13 @@ export function ProductList({ products, category }: ProductListProps) {
       <h2>{category}</h2>
       <Slider {...settings} className={styles.slider}>
         {products.map((product) => (
-          <Product {...product} key={product.id}/>
+          <Product
+            {...product}
+            key={product.id}
+            onAddToCart={() => handleAddToCart(product)}
+          />
         ))}
       </Slider>
     </section>
-  )
+  );
 }

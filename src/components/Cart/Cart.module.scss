@@ -6,13 +6,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 110px;
   position: fixed;
   right: 0;
-  top: 0;
+  top: 110px;
   padding: 0 15px;
   width: 500px;
-  z-index: 3;
+  z-index: 4;
+  overflow-y: scroll;
 
   .divisor {
     background-color: $light-gray;
@@ -39,46 +39,61 @@
   }
 
   .produto {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 
-    .nome {
-      color: $dark-gray;
-      font-size: 18px;
-      padding-bottom: 10px;
-      width: 50%;
-    }
+    > li {
+      margin-top: 20px;
+      display: grid;
+      gap: 15px;
+      grid-template-areas:
+        "nome preco"
+        "remover quantidade"
+        "divisor divisor";
 
-    .preco {
-      color: $dark-gray;
-      font-size: 18px;
-      font-weight: 600;
-      text-align: right;
-      width: 50%;
-    }
+      .nome {
+        grid-area: nome;
+        color: $dark-gray;
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+  
+      .preco {
+        grid-area: preco;
+        color: $dark-gray;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: right;
+      }
+  
+      .remover {
+        grid-area: remover;
+        background-color: transparent;
+        border: none;
+        color: #EA1D2C;
+        cursor: pointer;
+        font-size: 14px;
+        text-align: left;
+      }
+  
+      .quantidade {
+        grid-area: quantidade;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: right;
+      }
 
-    .remover {
-      background-color: transparent;
-      border: none;
-      color: #EA1D2C;
-      cursor: pointer;
-      font-size: 14px;
-      text-align: left;
-      width: 50%;
-    }
-
-    .quantidade {
-      font-size: 18px;
-      font-weight: 600;
-      text-align: right;
-      width: 50%;
+      > .divisor {
+        grid-area: divisor;
+      }
     }
   }
-
 
   .valor {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 
     >div {
       display: flex;
