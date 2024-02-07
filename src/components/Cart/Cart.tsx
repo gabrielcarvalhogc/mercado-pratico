@@ -1,6 +1,7 @@
 import { useCart, useTotalValue } from '@/contexts/CartContext';
 import styles from './Cart.module.scss';
 import { formatPrice } from '@/hooks/formatPrice';
+import { CartItem } from './CartItem';
 
 export function Cart() {
   const { cartItems } = useCart();
@@ -19,13 +20,7 @@ export function Cart() {
       <div className={styles.divisor}></div>
       <ul className={styles.produto}>
         {cartItems.map((item, index) => (
-          <li key={index}>
-            <p className={styles.nome}>{item.nome}</p>
-            <p className={styles.preco}>{formatPrice(item.preco)}</p>
-            <button className={styles.remover}>Remover</button>
-            <span className={styles.quantidade}>{item.quantidade}</span>
-            <div className={styles.divisor}></div>
-          </li>
+          <CartItem key={index} item={item}/>
         ))}
       </ul>
 

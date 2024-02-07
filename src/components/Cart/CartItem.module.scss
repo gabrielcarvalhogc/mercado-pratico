@@ -1,0 +1,60 @@
+@import "../../styles/variables.module";
+
+.lista {
+  margin-top: 20px;
+  display: grid;
+  gap: 15px;
+  grid-template-areas:
+    "nome preco"
+    "remover quantidade"
+    "divisor divisor";
+
+  .nome {
+    grid-area: nome;
+    color: $dark-gray;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .preco {
+    grid-area: preco;
+    color: $dark-gray;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .remover {
+    grid-area: remover;
+    background-color: transparent;
+    border: none;
+    color: $red;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .quantidade {
+    grid-area: quantidade;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    align-items: center;
+
+    > button {
+      border: none;
+      font-size: 20px;
+      font-weight: 700;
+      color: $red;
+      cursor: pointer;
+      padding: 4px;
+    }
+  }
+
+  > .divisor {
+    grid-area: divisor;
+  }
+}
