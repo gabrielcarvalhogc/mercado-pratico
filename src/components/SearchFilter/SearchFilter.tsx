@@ -6,6 +6,7 @@ import styles from './SearchFilter.module.scss'
 import { useState } from 'react';
 import { ProductItemType } from '@/types/productItem';
 import { Product } from '../Product/Product';
+import { useCart } from '@/contexts/CartContext';
 
 interface SearchFIlterProps {
   data: ProductItemType[]
@@ -14,6 +15,15 @@ interface SearchFIlterProps {
 export function SearchFilter({ data }: SearchFIlterProps) {
   const [items, setItems] = useState(data);
   const [searchTerm, setSearchTerm] = useState('');
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (product: ProductItemType) => {
+    addToCart({
+      nome: product.title,
+      preco: product.preco,
+      quantidade: 1,
+    });
+  };
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value;
@@ -47,7 +57,11 @@ export function SearchFilter({ data }: SearchFIlterProps) {
       </div>
       <div className={styles.filtered}>
         {isInputChange && items.map(item => (
-          <Product {...item} key={item.id} />
+          <Product 
+            {...item} 
+            key={item.id} 
+            onAddToCart={() => handleAddToCart(item)}  
+          />
         ))}
       </div>
     </>

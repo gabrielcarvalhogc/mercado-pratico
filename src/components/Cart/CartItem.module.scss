@@ -54,7 +54,11 @@
     }
   }
 
-  > .divisor {
+  .divisor {
+    background-color: $light-gray;
+    height: 1px;
+    width: 100%;
     grid-area: divisor;
+    margin-bottom: 10px;
   }
 }

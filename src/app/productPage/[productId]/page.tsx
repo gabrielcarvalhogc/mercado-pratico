@@ -7,11 +7,21 @@ import { ProductItemType } from '@/types/productItem';
 import Image from 'next/image';
 import styles from '../page.module.scss';
 import { getProductById } from '@/hooks/getProductsById';
+import { useCart } from '@/contexts/CartContext';
 
 export default function Page() {
   const router = useRouter();
   const params = useParams<{ productId: string }>();
   const produto = getProductById(Number(params.productId)) as ProductItemType;
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (produto: ProductItemType) => {
+    addToCart({
+      nome: produto.title,
+      preco: produto.preco,
+      quantidade: 1,
+    });
+  };
 
   return (
     <>
@@ -26,7 +36,7 @@ export default function Page() {
             <h2>{produto.title}</h2>
             <p>{produto.description}</p>
             <h3>{formatPrice(produto.preco)}</h3>
-            <button>Adicionar ao carrinho</button>
+            <button onClick={() => handleAddToCart(produto)}>Adicionar ao carrinho</button>
           </div>
         </section>
       </main>

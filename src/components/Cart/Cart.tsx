@@ -15,9 +15,9 @@ export function Cart() {
         <span className={styles.pedido}>Seu pedido em</span>
         <h2 className={styles.title}>Mercado prático</h2>
         <p className={styles.text}>O supermercado do seu dia-a-dia</p>
+        <div className={styles.divisor}></div>
       </div>
 
-      <div className={styles.divisor}></div>
       <ul className={styles.produto}>
         {cartItems.map((item, index) => (
           <CartItem key={index} item={item}/>
