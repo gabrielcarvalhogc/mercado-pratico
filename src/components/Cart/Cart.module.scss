@@ -2,17 +2,11 @@
 
 .aside {
   background-color: $white;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  position: fixed;
-  right: 0;
-  top: 110px;
-  padding: 0 15px;
+  padding: 15px;
   width: 500px;
-  z-index: 4;
-  overflow-y: scroll;
 
   .apresentation {
     .pedido {

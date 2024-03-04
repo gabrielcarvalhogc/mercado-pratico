@@ -37,7 +37,11 @@ export function Header() {
 
       <MenuLinks/>
 
-      <Drawer open={open} onClose={toggleDrawer(false)}>
+      <Drawer 
+        open={open} 
+        onClose={toggleDrawer(false)}
+        anchor='right'
+      >
         {<Cart/>}
       </Drawer>
     </header>

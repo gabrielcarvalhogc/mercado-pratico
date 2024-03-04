@@ -1,35 +1,5 @@
 @import '../../styles/variables.module';
 
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes swing {
-  15% {
-    transform: rotate(5deg);
-  }
-  30% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(3deg);
-  }
-  70% {
-    transform: rotate(-3deg);
-  }
-  85% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 .header {
   background-color: $white;
   height: 115px;
@@ -85,18 +55,8 @@
         font-size: 16px;
         font-weight: 700;
       }
-  
-      &.swing {
-        animation: swing 0.5s ease-in-out;
-      }
     }
   }
-
-  aside {
-    animation: slideIn 0.5s ease-in-out;
-    transform-origin: top right;
-  }
-
 }
 
 @media (max-width: 768px) and (min-width: 500px) {
