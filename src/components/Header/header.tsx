@@ -3,32 +3,20 @@
 import { ShoppingBasket } from '../Icons/ShoppingBasket';
 import styles from './Header.module.scss';
 import { ShoppingCart } from '../Icons/ShoppingCart';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Cart } from '../Cart/Cart';
 import { MenuLinks } from './MenuLinks';
 import { useTotalValue } from '@/contexts/CartContext';
 import { formatPrice } from '@/hooks/formatPrice';
+import { Drawer } from "@mui/material";
 
 export function Header() {
-  const [showCart, setShowCart] = useState(false);
-  const [prevCartValue, setPrevCartValue] = useState(0);
   const cartValue = useTotalValue();
+  const [open, setOpen] = useState(false);
 
-  const toggleCart = () => {
-    setShowCart(!showCart);
-  }
-
-  useEffect(() => {
-    if (cartValue !== prevCartValue) {
-      document.getElementById('cartButton')?.classList.add(styles.swing);
-
-      setTimeout(() => {
-        document.getElementById('cartButton')?.classList.remove(styles.swing);
-      }, 500);
-
-      setPrevCartValue(cartValue);
-    }
-  }, [cartValue, prevCartValue]);
+  const toggleDrawer = (newOpen: boolean) => () => {
+    setOpen(newOpen);
+  };
 
   return (
     <header className={styles.header}>
@@ -37,9 +25,9 @@ export function Header() {
           <ShoppingBasket/>
           <h1>Mercado prático</h1>
         </a>
-        <button 
-          className={styles.cartButton} 
-          onClick={toggleCart} 
+        <button
+          className={styles.cartButton}
+          onClick={toggleDrawer(true)}
           id="cartButton"
         >
           <ShoppingCart/>
@@ -49,7 +37,9 @@ export function Header() {
 
       <MenuLinks/>
 
-      {showCart && <Cart/>}
+      <Drawer open={open} onClose={toggleDrawer(false)}>
+        {<Cart/>}
+      </Drawer>
     </header>
   );
 }
