@@ -2,6 +2,7 @@ import { useCart, useTotalValue } from '@/contexts/CartContext';
 import styles from './Cart.module.scss';
 import { formatPrice } from '@/hooks/formatPrice';
 import { CartItem } from './CartItem';
+import { CommentsField } from '../CommentsField/CommentsField';
 
 export function Cart() {
   const { cartItems } = useCart();
@@ -24,6 +25,8 @@ export function Cart() {
         ))}
       </ul>
 
+      <CommentsField/>
+      
       <div className={styles.valor}>
         <div>
           <p className={styles.subtotal}>subtotal</p>
