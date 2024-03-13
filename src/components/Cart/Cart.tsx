@@ -27,6 +27,7 @@ export function Cart() {
 
       <CommentsField/>
       
+      <div className={styles.divisor}></div>
       <div className={styles.valor}>
         <div>
           <p className={styles.subtotal}>subtotal</p>
