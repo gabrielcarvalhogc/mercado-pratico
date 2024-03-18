@@ -1,0 +1,130 @@
+@import '../../styles/variables.module';
+.main {
+  margin: 5% 0;
+
+  .closebtn {
+    border: none;
+    color: rgb(219, 30, 30);
+    cursor: pointer;
+    position: relative;
+    align-items: flex-start;
+    left: 95%;
+  }
+
+  img {
+    border-radius: 22px 0 0 22px;
+    box-shadow: 3px 0px 5px $light-gray;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+
+    .container {
+      background-color: $white;
+      border-radius: 0 22px 22px 0;
+      box-shadow: 3px 0px 5px $light-gray;
+      display: flex;
+      flex-direction: column;
+      height: 500px;
+      justify-content: space-around;
+      padding: 0 15px;
+      width: 500px;
+
+      h2 {
+        color: $dark-gray;
+        font-size: 26px;
+      }
+
+      p {
+        color: $light-gray;
+      }
+
+      h3 {
+        color: $dark-gray;
+        font-size: 22px;
+      }
+
+      button {
+        background: $blue-gradient;
+        background: $dark-blue;
+        border: none;
+        border-radius: 8px;
+        color: $white;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        height: 45px;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width:1024px) {
+  .main {
+    margin-bottom: 20px;
+    
+    .section {
+      img {
+        height: 400px;
+        width: 400px;
+      }
+
+      .container {
+        height: 400px;
+        width: 350px;
+      }
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width:768px) {
+  .main {
+    .closebtn {
+      left: 43%;
+      top: 50px;
+    }
+    .section {
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        border-radius: 22px 22px 0 0;
+        height: 400px;
+        width: 400px;
+      }
+
+      .container {
+        border-radius:0 0 22px 22px;
+        height: 300px;
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width:425px) {
+  .main {
+
+    .closebtn {
+      left: 43%;
+      top: 50px;
+    }
+    .section {
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        border-radius: 18px 18px 0 0;
+        height: 300px;
+        width: 300px;
+      }
+
+      .container {
+        border-radius:0 0 18px 18px;
+        height: 250px;
+        width: 300px;
+      }
+    }
+  }
+}
