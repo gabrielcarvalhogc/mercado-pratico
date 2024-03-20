@@ -1,10 +1,16 @@
 import { Box, Button, TextField } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function CommentsField() {
   const [comment, setComment] = useState<string>('');
-  const [boxContent, setBoxContent] = useState<string>('');
+  const [boxContent, setBoxContent] = useState<string>(() => {
+    return localStorage.getItem("boxContent") || "";
+  });
   const [showBox, setShowBox] = useState<boolean>(false);
+
+  useEffect(() => {
+    localStorage.setItem("boxContent", boxContent);
+  }, [boxContent]);
 
   const handleCommentChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setComment(event.target.value);
