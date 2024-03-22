@@ -1,12 +1,12 @@
+import React, { useState, useEffect } from "react";
 import { Box, Button, TextField } from "@mui/material";
-import { useState, useEffect } from "react";
 
 export function CommentsField() {
   const [comment, setComment] = useState<string>('');
   const [boxContent, setBoxContent] = useState<string>(() => {
     return localStorage.getItem("boxContent") || "";
   });
-  const [showBox, setShowBox] = useState<boolean>(false);
+  const [isBoxVisible, setBoxVisibility] = useState<boolean>(() => !!localStorage.getItem("boxContent"));
 
   useEffect(() => {
     localStorage.setItem("boxContent", boxContent);
@@ -14,14 +14,14 @@ export function CommentsField() {
 
   const handleCommentChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setComment(event.target.value);
-    setShowBox(false);
+    setBoxVisibility(false);
   };
 
-  const isButtonDisabled = comment.trim() === '';
+  const isSaveButtonDisabled = comment.trim() === '';
 
   const handleSaveClick = () => {
-    setShowBox(true);
     setBoxContent(comment);
+    setBoxVisibility(true);
     setComment('');
   };
 
@@ -38,7 +38,7 @@ export function CommentsField() {
         value={comment}
         onChange={handleCommentChange}
       />
-      {showBox && (
+      {isBoxVisible && (
         <Box 
           component="p"
           display="flex"
@@ -55,7 +55,7 @@ export function CommentsField() {
       <Button
         variant="contained"
         onClick={handleSaveClick}
-        disabled={isButtonDisabled}
+        disabled={isSaveButtonDisabled}
       >
         Salvar
       </Button>
